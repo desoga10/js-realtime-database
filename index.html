@@ -57,17 +57,11 @@
 
       <button type="submit" sendMessage()>Register</button>
   </form>
-
-  <script src="app.js"></script>
   <script type="module">
-    // Import the functions you need from the SDKs you need
+
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
       apiKey: "AIzaSyCVdPB6gHZQ6_SnR8vxf9nX7vw3biNKKGk",
       authDomain: "tic-tac-toe-36c2d.firebaseapp.com",
@@ -81,10 +75,8 @@
 
     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
-
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-
 
   //listen for submit event//(1)
 document
@@ -115,7 +107,6 @@ function formSubmit(e) {
 }
 
 //Send Message to Firebase(4)
-
 function sendMessage( name, email, password, bio, job, interest) {
   const database = getDatabase();
 
